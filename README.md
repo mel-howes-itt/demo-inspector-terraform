@@ -1,5 +1,5 @@
 # demo-inspector-terraform
-Demo for using Terraform to provision 2 x EC2 instances with a particular tag, install AWS Inspector agent and then create AWS Inspector assessment target and template for those instances. 
+Demo for using Terraform to provision 2 x EC2 instances with a particular tag, install AWS Inspector agent and then create AWS Inspector assessment target and template for those instances. You can then use either the AWS CLI or the Console to start an assessment run using the template.
 
 The key name and path referenced (needed for the SSH to install AWS Inspector agent) are fake! Please add your own so it works. 
 
