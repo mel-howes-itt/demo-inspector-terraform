@@ -8,6 +8,7 @@ Use a separate .tfvars file with your AWS Acess Key and Secret Key in order to g
 You may need to change the region, this example is based on eu-west-1 (Ireland). If you change the region then you will need to change the ARNs for the rules packages. See here: https://docs.aws.amazon.com/inspector/latest/userguide/inspector_rules-arns.html
 
 This line in the script relates to a seemingly incorrect URL in sources.list which references a non-existent URL related to the region, which needs to be edited. If it's not changed the installation of the AWS Inspector agent stalls forever:
+
 sudo sed -i 's/eu-west-1\.ec2\.//g' /etc/apt/sources.list
 
 The security group has 3 ingress and egress rules to open ports 22, 80 and 443. This is needed so that Terraform can SSH in to ec2, get the AWS Inspector agent installer from https site and then run an update that grabs files from http site. 
