@@ -10,3 +10,5 @@ You may need to change the region, this example is based on eu-west-1 (Ireland).
 The security group has 3 ingress and egress rules to open ports 22, 80 and 443. This is needed so that Terraform can SSH in to ec2, get the AWS Inspector agent installer from https site and then run an update that grabs files from http site. 
 
 Note that AWS Linux AMIs have the AWS Inspector agent already installed, so this example is using an Ubuntu 16.04 AMI. The AMI will need to be updated, dependent on your region.
+
+These scripts are for proof of concept for demo purposes and are not considered production ready.
